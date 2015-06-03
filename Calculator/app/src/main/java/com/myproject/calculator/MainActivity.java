@@ -150,21 +150,7 @@ public class MainActivity extends Activity {
 
             case R.id.btplu:
 
-               // if (a == null) a= edv.getText().toString();
-               // if  (b ==null) b= edv.getText().toString();
-               // else edv.setText(a + b);
-               // int aa;
-               // int bb;
-                //try {
-                  // int aa = Integer.parseInt(a);
-                  //  int bb = Integer.parseInt(b);
-                  //  edv.setText(aa + bb);
-               // } catch (NumberFormatException e) {
-                    //Will Throw exception!
-                    //do something! anything to handle the exception.
-
-                //}
- // отсюда
+              
                 if (a==null && b==null)
                     {a= edv.getText().toString();
                     i = Float.parseFloat(a) ;
@@ -177,34 +163,10 @@ public class MainActivity extends Activity {
                      strI = String.valueOf(iii);
                     edv.setText(strI);
                     strI = null;
-               // i=0;
-                //ii=0;
-               // iii=0;
+              
                     a=null;
                     b=null;
                     flag=0;}
-
-
-                    //Will Throw exception!
-                    //do something! anything to handle the exception.
-
-
-
-                // edv.setText(a + b);
-
-                //List<String> where = new ArrayList<String>();
-               // where.add(edv.getText().toString());
-                //String p="+";
-//if ( where.isEmpty()) p="+";
-               // if (where.size() <2)
-               // {where.add(edv.getText().toString());}
-
-               // else {
-                   // Integer arrayLength = (Integer) where.size();
-                   // String s = where.get(arrayLength) + where.get(arrayLength - 1);
-
-                //edv.setText(s);}
-
                     break;
 
             case R.id.btmin:
@@ -274,11 +236,7 @@ public class MainActivity extends Activity {
 
 
             case R.id.btres:
-                //String s= edv.getText().toString();
-
-                //String result = String(eval(s));
-
-                //edv.setText(s);
+                
                 if (a==null && b==null)
                     break;
                 else if (a!= null && b==null)
