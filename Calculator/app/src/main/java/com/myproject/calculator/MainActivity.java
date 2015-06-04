@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -154,13 +155,16 @@ public class MainActivity extends Activity {
 
 
             case R.id.btplu:
-
-                if (a==null && b==null)
+                if (edv.length() == 0)
+                    break;
+                else if (a==null && b==null)
                     {a= edv.getText().toString();
                     i = Float.parseFloat(a) ;
                     flag=0;
                     oper = "+";
-                    btdot.setEnabled(true);}
+                    btdot.setEnabled(true);
+                        Toast.makeText(MainActivity.this, "+",
+                                Toast.LENGTH_SHORT).show();}
                 else
                     {b= edv.getText().toString();
                     ii = Float.parseFloat(b);
@@ -171,17 +175,23 @@ public class MainActivity extends Activity {
                      a=null;
                     b=null;
                     flag=0;
-                    btdot.setEnabled(true);}
+                    btdot.setEnabled(true);
+                        Toast.makeText(MainActivity.this, "+",
+                                Toast.LENGTH_SHORT).show();}
                     break;
 
             case R.id.btmin:
 
-                if (a==null && b==null)
+                if (edv.length() == 0)
+                    break;
+                else if (a==null && b==null)
                 {a= edv.getText().toString();
                     i = Float.parseFloat(a) ;
                     flag=0;
                     oper = "-";
-                    btdot.setEnabled(true);}
+                    btdot.setEnabled(true);
+                    Toast.makeText(MainActivity.this, "-",
+                            Toast.LENGTH_SHORT).show();}
                 else
                 {b= edv.getText().toString();
                     ii = Float.parseFloat(b);
@@ -193,19 +203,25 @@ public class MainActivity extends Activity {
                     a=null;
                     b=null;
                     flag=0;
-                    btdot.setEnabled(true);}
+                    btdot.setEnabled(true);
+                    Toast.makeText(MainActivity.this, "-",
+                            Toast.LENGTH_SHORT).show();}
 
                 break;
 
 
             case R.id.btdel:
 
-                if (a==null && b==null)
+                if (edv.length() == 0)
+                    break;
+                else if (a==null && b==null)
                 {a= edv.getText().toString();
                     i = Float.parseFloat(a) ;
                     flag=0;
                     oper = "/";
-                    btdot.setEnabled(true);}
+                    btdot.setEnabled(true);
+                    Toast.makeText(MainActivity.this, "/",
+                            Toast.LENGTH_SHORT).show();}
                 else
                 {b= edv.getText().toString();
                     ii = Float.parseFloat(b);
@@ -217,18 +233,24 @@ public class MainActivity extends Activity {
                     a=null;
                     b=null;
                     flag=0;
-                    btdot.setEnabled(true);}
+                    btdot.setEnabled(true);
+                    Toast.makeText(MainActivity.this, "/",
+                            Toast.LENGTH_SHORT).show();}
 
                 break;
 
             case R.id.btum:
 
-                if (a==null && b==null)
+                if (edv.length() == 0)
+                    break;
+               else if (a==null && b==null)
                 {a= edv.getText().toString();
                     i = Float.parseFloat(a) ;
                     flag=0;
                     oper = "*";
-                    btdot.setEnabled(true);}
+                    btdot.setEnabled(true);
+                    Toast.makeText(MainActivity.this, "*",
+                            Toast.LENGTH_SHORT).show();}
                 else
                 {b= edv.getText().toString();
                     ii = Float.parseFloat(b);
@@ -240,18 +262,16 @@ public class MainActivity extends Activity {
                     a=null;
                     b=null;
                     flag=0;
-                    btdot.setEnabled(true);}
+                    btdot.setEnabled(true);
+                    Toast.makeText(MainActivity.this, "*",
+                            Toast.LENGTH_SHORT).show();}
 
                 break;
 
 
 
             case R.id.btres:
-                //String s= edv.getText().toString();
 
-                //String result = String(eval(s));
-
-                //edv.setText(s);
                 if (a==null && b==null)
                     break;
                 else if (a!= null && b==null)
@@ -272,7 +292,8 @@ public class MainActivity extends Activity {
                     a=null;
                     b=null;
                     flag=0;
-                    btdot.setEnabled(true);}
+                    btdot.setEnabled(true);
+                    }
 
                 break;
 
