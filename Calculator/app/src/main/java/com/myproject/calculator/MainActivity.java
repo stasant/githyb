@@ -140,27 +140,27 @@ public class MainActivity extends Activity {
                     edv.append("0");
                 break;
 
+
             case R.id.btdot:
                 if (flag == 0)
                 {edv.setText("0.");
-                    flag =1;}
-                else if (flag ==1)
+                    flag =1;
+                    btdot.setEnabled(false);}
+                else
                 {edv.append(".");
-                    flag =2;}
-                else if (flag == 2)
-                {edv.setText ("");
-                flag =0;}
+                    btdot.setEnabled(false);}
 
                 break;
 
+
             case R.id.btplu:
 
-              
                 if (a==null && b==null)
                     {a= edv.getText().toString();
                     i = Float.parseFloat(a) ;
                     flag=0;
-                    oper = "+";}
+                    oper = "+";
+                    btdot.setEnabled(true);}
                 else
                     {b= edv.getText().toString();
                     ii = Float.parseFloat(b);
@@ -168,10 +168,10 @@ public class MainActivity extends Activity {
                      strI = String.valueOf(iii);
                     edv.setText(strI);
                     strI = null;
-              
-                    a=null;
+                     a=null;
                     b=null;
-                    flag=0;}
+                    flag=0;
+                    btdot.setEnabled(true);}
                     break;
 
             case R.id.btmin:
@@ -180,7 +180,8 @@ public class MainActivity extends Activity {
                 {a= edv.getText().toString();
                     i = Float.parseFloat(a) ;
                     flag=0;
-                    oper = "-";}
+                    oper = "-";
+                    btdot.setEnabled(true);}
                 else
                 {b= edv.getText().toString();
                     ii = Float.parseFloat(b);
@@ -191,7 +192,8 @@ public class MainActivity extends Activity {
 
                     a=null;
                     b=null;
-                    flag=0;}
+                    flag=0;
+                    btdot.setEnabled(true);}
 
                 break;
 
@@ -202,7 +204,8 @@ public class MainActivity extends Activity {
                 {a= edv.getText().toString();
                     i = Float.parseFloat(a) ;
                     flag=0;
-                    oper = "/";}
+                    oper = "/";
+                    btdot.setEnabled(true);}
                 else
                 {b= edv.getText().toString();
                     ii = Float.parseFloat(b);
@@ -213,7 +216,8 @@ public class MainActivity extends Activity {
 
                     a=null;
                     b=null;
-                    flag=0;}
+                    flag=0;
+                    btdot.setEnabled(true);}
 
                 break;
 
@@ -223,7 +227,8 @@ public class MainActivity extends Activity {
                 {a= edv.getText().toString();
                     i = Float.parseFloat(a) ;
                     flag=0;
-                    oper = "*";}
+                    oper = "*";
+                    btdot.setEnabled(true);}
                 else
                 {b= edv.getText().toString();
                     ii = Float.parseFloat(b);
@@ -234,14 +239,19 @@ public class MainActivity extends Activity {
 
                     a=null;
                     b=null;
-                    flag=0;}
+                    flag=0;
+                    btdot.setEnabled(true);}
 
                 break;
 
 
 
             case R.id.btres:
-                
+                //String s= edv.getText().toString();
+
+                //String result = String(eval(s));
+
+                //edv.setText(s);
                 if (a==null && b==null)
                     break;
                 else if (a!= null && b==null)
@@ -261,7 +271,8 @@ public class MainActivity extends Activity {
                     strI = null;
                     a=null;
                     b=null;
-                    flag=0;}
+                    flag=0;
+                    btdot.setEnabled(true);}
 
                 break;
 
@@ -273,7 +284,7 @@ public class MainActivity extends Activity {
                     a=null;
                     b=null;
                     flag=0;
-
+                btdot.setEnabled(true);
                 break;
 
         }
