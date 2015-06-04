@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
     float i ;
     float ii ;
     float iii ;
-    int flag = 1;
+    int flag = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,8 +144,13 @@ public class MainActivity extends Activity {
                 if (flag == 0)
                 {edv.setText("0.");
                     flag =1;}
-                else
-                    edv.append(".");
+                else if (flag ==1)
+                {edv.append(".");
+                    flag =2;}
+                else if (flag == 2)
+                {edv.setText ("");
+                flag =0;}
+
                 break;
 
             case R.id.btplu:
